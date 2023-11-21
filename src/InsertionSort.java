@@ -10,7 +10,7 @@ public class InsertionSort {
             int number = arr[i];
             int j = i - 1;
 
-            // Move elements of arr[0..i-1], that are greater than key, to one position ahead
+            // Move elements of arr[0..i-1], that are greater than number, to one position ahead
             // of their current position
             while (j >= 0 && arr[j] > number) {
                 arr[j + 1] = arr[j];
