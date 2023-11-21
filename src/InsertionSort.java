@@ -1,15 +1,22 @@
-public class InsertionSort{
+public class InsertionSort {
 
+    /**
+     * Sorts an array of integers in ascending order using the insertion sort algorithm.
+     *
+     * @param arr The array to be sorted.
+     */
     public void sort(int[] arr) {
-        for (int i = 1; i < arr.length; ++i) {
-            int key = arr[i];
+        for (int i = 1; i < arr.length; i++) {
+            int number = arr[i];
             int j = i - 1;
 
-            while (j >= 0 && arr[j] > key) {
+            // Move elements of arr[0..i-1], that are greater than key, to one position ahead
+            // of their current position
+            while (j >= 0 && arr[j] > number) {
                 arr[j + 1] = arr[j];
                 j = j - 1;
             }
-            arr[j + 1] = key;
+            arr[j + 1] = number;
         }
 
     }
