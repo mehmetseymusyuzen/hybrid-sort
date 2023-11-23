@@ -2,6 +2,11 @@ import java.util.Arrays;
 
 public class RadixSort {
 
+    /**
+     * Sorts the given array in ascending order using the radix sort algorithm.
+     *
+     * @param arr The array to be sorted.
+     */
     public static void sort(int[] arr) {
         int max = Arrays.stream(arr).max().getAsInt();
         for (int exp = 1; max / exp > 0; exp *= 10) {
@@ -9,6 +14,12 @@ public class RadixSort {
         }
     }
 
+    /**
+     * Performs the count sort algorithm on the given array based on the specified exponent.
+     *
+     * @param arr The array to be sorted.
+     * @param exp The exponent used for counting and sorting the digits.
+     */
     private static void countSort(int[] arr, int exp) {
         int n = arr.length;
         int[] output = new int[n];
