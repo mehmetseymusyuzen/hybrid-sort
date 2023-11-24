@@ -1,5 +1,5 @@
 public class HeapSort {
-    public void sort(int[] arr) {
+    public static int[] sort(int[] arr) {
         int n = arr.length;
 
         for (int i = n / 2 - 1; i >= 0; i--) {
@@ -13,6 +13,7 @@ public class HeapSort {
 
             heapify(arr, i, 0);
         }
+        return arr;
     }
 
     private static void heapify(int[] arr, int n, int i) {
