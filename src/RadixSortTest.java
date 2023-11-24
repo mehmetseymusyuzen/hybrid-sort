@@ -36,14 +36,7 @@ public class RadixSortTest {
             final int bound
     ) {
 
-
         System.out.println("Sorted Array: " + Arrays.toString(RadixSort.sort(generateRandomDataArray(size, bound))));
     }
 
-    public static void main(String[] args) {
-
-        testAlgorithmTime("1", "Radix Sort", 10000, 10000);//10K
-        testAlgorithmTime("2", "Radix Sort", 100000, 100000);//100K
-        testAlgorithmTime("3", "Radix Sort", 1000000, 1000000);//1M
-    }
 }
