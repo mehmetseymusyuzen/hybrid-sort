@@ -5,7 +5,7 @@ public class InsertionSort {
      *
      * @param arr The array to be sorted.
      */
-    public void sort(int[] arr) {
+    public static int[] sort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int number = arr[i];
             int j = i - 1;
@@ -18,7 +18,7 @@ public class InsertionSort {
             }
             arr[j + 1] = number;
         }
-
+        return arr;
     }
 
 }
