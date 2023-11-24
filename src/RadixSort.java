@@ -7,11 +7,12 @@ public class RadixSort {
      *
      * @param arr The array to be sorted.
      */
-    public static void sort(int[] arr) {
+    public static int[] sort(int[] arr) {
         int max = Arrays.stream(arr).max().getAsInt();
         for (int exp = 1; max / exp > 0; exp *= 10) {
             countSort(arr, exp);
         }
+        return arr;
     }
 
     /**
