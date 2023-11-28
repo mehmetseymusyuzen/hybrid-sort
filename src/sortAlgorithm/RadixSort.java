@@ -1,19 +1,21 @@
+package sortAlgorithm;
+
 import java.util.Arrays;
 
-public class RadixSort {
-
-    /**
-     * Sorts the given array in ascending order using the radix sort algorithm.
-     *
-     * @param arr The array to be sorted.
-     */
-    public static int[] sort(int[] arr) {
-        int max = Arrays.stream(arr).max().getAsInt();
+public class RadixSort implements SortingAlgorithm {
+    @Override
+    public int[] sortArr(
+            final int[] arrayToBeSort,
+            final int... varargs
+    ) {
+        int[] copyArrayToBeSort = Arrays.copyOf(arrayToBeSort, arrayToBeSort.length);
+        int max = Arrays.stream(copyArrayToBeSort).max().getAsInt();
         for (int exp = 1; max / exp > 0; exp *= 10) {
-            countSort(arr, exp);
+            countSort(copyArrayToBeSort, exp);
         }
-        return arr;
+        return copyArrayToBeSort;
     }
+
 
     /**
      * Performs the count sort algorithm on the given array based on the specified exponent.
