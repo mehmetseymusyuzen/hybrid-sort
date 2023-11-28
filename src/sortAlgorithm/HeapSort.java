@@ -1,20 +1,30 @@
-public class HeapSort {
-    public static int[] sort(int[] arr) {
-        int n = arr.length;
+package sortAlgorithm;
+
+import java.util.Arrays;
+
+public class HeapSort implements SortingAlgorithm {
+    @Override
+    public int[] sortArr(
+            final int[] arrayToBeSort,
+            final int... varargs
+    ) {
+        int[] copyArrayToBeSort = Arrays.copyOf(arrayToBeSort, arrayToBeSort.length);
+        int n = copyArrayToBeSort.length;
 
         for (int i = n / 2 - 1; i >= 0; i--) {
-            heapify(arr, n, i);
+            heapify(copyArrayToBeSort, n, i);
         }
 
         for (int i = n - 1; i > 0; i--) {
-            int temp = arr[0];
-            arr[0] = arr[i];
-            arr[i] = temp;
+            int temp = copyArrayToBeSort[0];
+            copyArrayToBeSort[0] = copyArrayToBeSort[i];
+            copyArrayToBeSort[i] = temp;
 
-            heapify(arr, i, 0);
+            heapify(copyArrayToBeSort, i, 0);
         }
-        return arr;
+        return copyArrayToBeSort;
     }
+
 
     private static void heapify(int[] arr, int n, int i) {
         int largest = i;
