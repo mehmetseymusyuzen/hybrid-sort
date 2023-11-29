@@ -1,7 +1,4 @@
-import sortAlgorithm.HeapSort;
-import sortAlgorithm.InsertionSort;
-import sortAlgorithm.QuickSort;
-import sortAlgorithm.RadixSort;
+import sortAlgorithm.*;
 import tester.SortingAlgorithmTester;
 
 public class Main {
@@ -11,6 +8,7 @@ public class Main {
         SortingAlgorithmTester quickSortTester = new SortingAlgorithmTester(QuickSort.class);
         SortingAlgorithmTester radixSortTester = new SortingAlgorithmTester(RadixSort.class);
         SortingAlgorithmTester heapSortTester = new SortingAlgorithmTester(HeapSort.class);
+        SortingAlgorithmTester hybridSortTester = new SortingAlgorithmTester(HybridSort.class);
 
         System.out.println("InsertionSortAlgorithm");
         insertionTester.test();
@@ -23,6 +21,9 @@ public class Main {
 
         System.out.println("QuickSortAlgorithm");
         quickSortTester.test();
+
+        System.out.println("HybridSortAlgorithm");
+        hybridSortTester.test();
 
     }
 }

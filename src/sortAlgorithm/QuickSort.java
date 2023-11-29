@@ -38,4 +38,8 @@ public class QuickSort implements SortingAlgorithm {
         arr[i] = arr[j];
         arr[j] = temp;
     }
+
+    public int getPartition(int[] arr, int low, int high) {
+        return partition(arr, low, high);
+    }
 }
