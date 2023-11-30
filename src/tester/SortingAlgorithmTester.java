@@ -6,6 +6,8 @@ import sortAlgorithm.SortingAlgorithm;
 public class SortingAlgorithmTester {
 
     public SortingAlgorithm sortingAlgorithm;
+    public static final int[] RANDOM_INTEGER_ARRAY_10 = RandomArrayGenerator.generateRandomDataArray(10, 10);
+    public static final int[] RANDOM_INTEGER_ARRAY_50 = RandomArrayGenerator.generateRandomDataArray(50, 50);
     public static final int[] RANDOM_INTEGER_ARRAY_1H = RandomArrayGenerator.generateRandomDataArray(100, 100);
     public static final int[] RANDOM_INTEGER_ARRAY_1K = RandomArrayGenerator.generateRandomDataArray(1000, 1000);
     public static final int[] RANDOM_INTEGER_ARRAY_10K = RandomArrayGenerator.generateRandomDataArray(10000, 10000);
@@ -22,6 +24,8 @@ public class SortingAlgorithmTester {
 
 
     public void test() throws Exception {
+        sortingAlgorithm.testAlgorithm(RANDOM_INTEGER_ARRAY_10, 0, RANDOM_INTEGER_ARRAY_10.length - 1);
+        sortingAlgorithm.testAlgorithm(RANDOM_INTEGER_ARRAY_50, 0, RANDOM_INTEGER_ARRAY_50.length - 1);
         sortingAlgorithm.testAlgorithm(RANDOM_INTEGER_ARRAY_1H, 0, RANDOM_INTEGER_ARRAY_1H.length - 1);
         sortingAlgorithm.testAlgorithm(RANDOM_INTEGER_ARRAY_1K, 0, RANDOM_INTEGER_ARRAY_1K.length - 1);
         sortingAlgorithm.testAlgorithm(RANDOM_INTEGER_ARRAY_10K, 0, RANDOM_INTEGER_ARRAY_10K.length - 1);
