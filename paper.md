@@ -1,4 +1,4 @@
-## Sorting slowly: comparison between Quick, Radix, Heap, and Insertion Sorts
+## Sorting Slowly: Comparison Between Quick, Radix, Heap, and Insertion Sorts
 
 ### Mehmet Yuzen
 
@@ -48,18 +48,25 @@ Recorded results depict the average time taken by each algorithm to sort arrays 
 representations illustrate the comparative performance among Quick Sort, Radix Sort, Heap Sort, and Insertion Sort
 across varying input sizes.
 
+ <br>
+
+![](graph/figure1.png)
+<p> Figure 1: Average time each algorithm took to sort an array of randomly shuffled
+values from 0 to n − 1
+
+ <br>
+
 ## 4. Conclusions
 
-The "best" sorting algorithm depends on the specific requirements of your application:
+We conclude, that quick sort is best of the four sorts.
 
-* For small datasets or nearly sorted data, Insertion Sort might be a good choice due to its simplicity and efficiency.
+ <br>
 
-* For general-purpose sorting with an emphasis on average-case performance, Quick Sort is often preferred.
+![](graph/figure2.png)
+<p>Figure 2: The graph shown in Figure 1 for small array sizes.
 
-* If the dataset consists of fixed-length keys, Radix Sort could be the most efficient choice due to its linear time
-  complexity.
+ <br>
 
-* Heap Sort might be preferable when a stable, worst-case guaranteed sorting algorithm is needed, although it's not as
-  commonly used in practice compared to Quick Sort or Merge Sort.
-
+![](graph/figure3.png)
+<p>Figure 3: The graph shown in Figure 1 for big array sizes.
 
